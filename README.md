@@ -1,4 +1,9 @@
 <div align="center">
+  <a href="https://plantapp-1--29bsmmwq.preview.emergentagent.com/">
+    <img src="https://img.shields.io/badge/🌿_Aceder_ao_PlantIA-Abrir_Aplicativo-brightgreen?style=for-the-badge" alt="Aceder ao PlantIA">
+  </a>
+</div>
+<div align="center">
   <h1>🌱 PlantIA</h1>
   <p><b>Inteligência Artificial aplicada à identificação, diagnóstico e cuidado inteligente de plantas.</b></p>
   <p>Aplicação moderna desenvolvida para auxiliar utilizadores a monitorizar, diagnosticar e cuidar da saúde das suas plantas através de tecnologia de ponta.</p>
