@@ -1,0 +1,175 @@
+{
+  "app_name": "PlantIA",
+  "personality": "1 iOS-Native Clean",
+  "personality_one_liner": "Modern, minimal, and highly utilitarian design that frames the natural beauty of plants without distraction.",
+  "color": {
+    "surface": "#F8F9F8",
+    "onSurface": "#1A1D1A",
+    "surfaceSecondary": "#FFFFFF",
+    "onSurfaceSecondary": "#1A1D1A",
+    "surfaceTertiary": "#EAECEA",
+    "onSurfaceTertiary": "#2E4F2E",
+    "surfaceInverse": "#2E4F2E",
+    "onSurfaceInverse": "#FFFFFF",
+    "brand": "#2E4F2E",
+    "onBrand": "#FFFFFF",
+    "brandPrimary": "#2E4F2E",
+    "onBrandPrimary": "#FFFFFF",
+    "brandSecondary": "#4A734A",
+    "onBrandSecondary": "#FFFFFF",
+    "brandTertiary": "#E8EFE8",
+    "onBrandTertiary": "#2E4F2E",
+    "success": "#458B47",
+    "onSuccess": "#FFFFFF",
+    "warning": "#D4A352",
+    "onWarning": "#FFFFFF",
+    "error": "#D9534F",
+    "onError": "#FFFFFF",
+    "info": "#6B8E6B",
+    "onInfo": "#FFFFFF",
+    "border": "#E1E5E1",
+    "borderStrong": "#B8C4B8",
+    "divider": "#EAECEA",
+    "muted": "#7A857A"
+  },
+  "typography": {
+    "displayFontFamily": "Plus Jakarta Sans",
+    "textFontFamily": "Plus Jakarta Sans",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous vertical rhythm. Don't crowd content. Use intentional whitespace.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 6,
+    "md": 12,
+    "lg": 20,
+    "pill": 999
+  },
+  "shadow_tier": 1,
+  "navigation": "bottom_tabs",
+  "icon_set": "Phosphor",
+  "glassmorphism": {
+    "enabled": true,
+    "do's": [
+      "Use on bottom tab bar",
+      "Sticky header backgrounds over scrolling content",
+      "Floating action buttons or camera controls over viewfinder",
+      "Featured hero cards frosted overlay"
+    ],
+    "dont's": [
+      "Body text areas",
+      "Form inputs",
+      "Dense list rows"
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Início",
+      "purpose": "Dashboard providing a clear overview of upcoming care routines (watering/fertilizing) and quick task logging.",
+      "states": {
+        "loading": "Skeleton timeline and cards.",
+        "empty": "Subtle illustration with text 'Tudo regado por hoje' (All watered for today) and a primary CTA to discover plants.",
+        "error": "Message: 'Erro ao carregar agenda' with a retry button."
+      },
+      "layout": "Use a personalized plant list with status indicators and an upcoming tasks timeline. Implement quick-action logging buttons for care events (watering) and an AI health scanner entry point. Focus on modular card layouts."
+    },
+    {
+      "name": "Identificador",
+      "purpose": "Camera UI for plant and disease identification, prioritizing a clean, focused scanning experience.",
+      "states": {
+        "loading": "Spinner over blurred camera viewfinder.",
+        "empty": "N/A - Camera stream is the default.",
+        "error": "Camera permission error with 'Permitir Câmera' button."
+      },
+      "layout": "Clean viewfinder with framing guides (reticle) and instructional overlay ('Posicione a planta no quadro'). Keep primary shutter central and accessible, with secondary tools in a control bar. Post-scan should show a confidence score and organize actionable details into segmented cards."
+    },
+    {
+      "name": "Minhas Plantas",
+      "purpose": "Collection of the user's registered plants showing their status.",
+      "states": {
+        "loading": "Skeleton grid.",
+        "empty": "Image of an empty pot with 'Nenhuma planta cadastrada' and an 'Adicionar Planta' primary CTA.",
+        "error": "Message: 'Não foi possível carregar suas plantas' with a retry button."
+      },
+      "layout": "Grid or single column layout with generous 'md' margin between items. Display real plant photos where possible. Each card should feature the plant name and next care date."
+    },
+    {
+      "name": "Horta & Guias",
+      "purpose": "Step-by-step planting guides and vegetable garden (horta) tutorials.",
+      "states": {
+        "loading": "Skeleton list of guides.",
+        "empty": "Illustration with 'Nenhum guia encontrado'.",
+        "error": "Message: 'Erro ao carregar guias' with a retry button."
+      },
+      "layout": "Full-width editorial-style hero cards for featured guides, followed by a searchable library of tutorials. Use real photos for vegetable gardens with a gradient-to-dark scrim pattern to ensure text readability."
+    },
+    {
+      "name": "Detalhes da Planta",
+      "purpose": "Deep dive into a specific plant's health, watering schedule reminder setup, and care history.",
+      "states": {
+        "loading": "Skeleton detail view.",
+        "empty": "N/A - Data is required to open.",
+        "error": "Message: 'Erro ao carregar detalhes' with a retry button."
+      },
+      "layout": "Hero image at the top with a top-to-bottom scrim. Plant title and key metrics (water once a week) overlaid. Below, segment the care instructions and reminder settings into distinct, rounded cards."
+    }
+  ],
+  "images": {
+    "onboarding_hero": {
+      "url": "https://images.unsplash.com/photo-1525498128493-380d1990a112?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwaG91c2VwbGFudCUyMG1vbnN0ZXJhJTIwaXNvbGF0ZWR8ZW58MHx8fHwxNzkzNzkyMjAxfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Minimalist monstera leaf isolated on white"
+    },
+    "empty_pot_illustration": {
+      "url": "https://images.unsplash.com/photo-1617214922084-5db8d3c3df5a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHBsYW50JTIwcG90JTIwbWluaW1hbHxlbnwwfHx8fDE3OTM3OTIyMDF8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Empty minimalist plant pot"
+    },
+    "vegetable_garden_hero": {
+      "url": "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHx2ZWdldGFibGUlMjBnYXJkZW4lMjBwbGFudGluZyUyMG1vZGVybnxlbnwwfHx8fDE3OTM3OTIyMDF8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Modern vegetable garden with lettuce and chives"
+    }
+  },
+  "haptics": {
+    "events": {
+      "primary_button_press": "impactLight",
+      "tab_change": "selection",
+      "plant_scanned_success": "notificationSuccess",
+      "watering_logged": "impactMedium"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color palette provided. All text and UI elements must adhere to WCAG AA contrast rules.",
+    "Do NOT use generic indigo, blue, or purple colors. We are using an earthy Forest/Moss green (#2E4F2E) paired with neutral sand/off-white colors.",
+    "Implement Google Sign-in on the onboarding screen as requested in the problem statement.",
+    "When displaying plant images as hero headers or cards, ALWAYS apply a gradient-to-dark vertical scrim (transparent to >=70% surfaceInverse) so overlaid text is fully readable.",
+    "Ensure touch targets for quick-log watering buttons are at least 44x44pt.",
+    "Use Phosphor icons. Stick to one weight per screen (outlined default, filled active in tab bar).",
+    "Layout learnings: The Home screen should prioritize a timeline/schedule view of upcoming watering tasks. The Camera Identifier needs a clean viewfinder with framing reticle overlays. Post-scan details should use separated metric cards rather than dense text lists.",
+    "Translate all labels and UI text strictly into Brazilian Portuguese as instructed."
+  ]
+}
